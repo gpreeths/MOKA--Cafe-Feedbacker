@@ -6,6 +6,15 @@ app.use(cors())
 require("dotenv").config()
 app.use(express.json())
 mongoose.connect(process.env.MONGO_URL)
+
+mongoose.connect(process.env.MONGO_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log("Connected to MongoDB Atlas"))
+.catch((err) => console.error("MongoDB connection error:", err));
+
+
 const path=require('path')
 app.use('/uploads',express.static(path.join(__dirname,'uploads','reviews')))
 
