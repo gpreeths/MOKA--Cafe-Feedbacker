@@ -9,14 +9,12 @@ import AdminReview from './assets/Pages/adminReview';
 import CustomerReview from './assets/Pages/CustomerReview';
 import PreviousReviews from './assets/Pages/PreviousReviews.jsx';
 import Error from './assets/Pages/Error.jsx';
-import FullImageView from './assets/Pages/FullImageView.jsx';// Import the new FullImageView component
+import FullImageView from './assets/Pages/FullImageView.jsx';
 import './style.css';
-
 
 function App() {
   return (
     <Routes>
-      <Route path="*" element={<Error />} />
       <Route path="/" element={<Home />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
@@ -25,7 +23,8 @@ function App() {
       <Route path="/customerreview" element={<CustomerReview />} />
       <Route path="/adminReview" element={<AdminReview />} />
       <Route path="/previousreviews" element={<PreviousReviews />} />
-      <Route path="/full-image/:id" element={<FullImageView />} /> {/* Route to view full image */}
+      <Route path="/full-image/:id" element={<FullImageView />} />
+      <Route path="*" element={<Error />} />
     </Routes>
   );
 }
