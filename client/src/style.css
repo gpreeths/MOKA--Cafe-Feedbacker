@@ -1,0 +1,886 @@
+body {
+  background-color: #DCCFC1;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Universal Menu Styles */
+.menuContainer1,
+.menu4Container {
+  height: 100px;
+  width: auto;
+  border-bottom: 5px solid #d5d5d5;
+  padding: 10px;
+}
+
+.menuList1,
+.menu4List {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.menuList1 {
+  justify-content: center;
+  margin: 1;
+}
+
+.menu4List {
+  justify-content: right;
+  margin-right: 5%;
+  margin-top: 10px;
+}
+
+.menuList1 li,
+.menu4List li {
+  margin: 0 15px;
+}
+
+.menuList1 li a,
+.menu4List li a,
+.sideBar li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.1s;
+}
+
+.menuList1 li a:hover,
+.menu4List li a:hover,
+.sideBar li a:hover {
+  color: #af6c07;
+}
+
+.logoiconMenu1 {
+  width: 180px;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.logo4iconMenu {
+  width: 180px;
+  display: block;
+  margin-left: 75%;
+  margin-top: -80px;
+}
+
+.user {
+  height: 50px;
+  width: 390px;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5%;
+  background-color: rgb(222, 222, 217);
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
+}
+
+/* Home Page */
+
+.images {
+  display: flex;
+}
+
+.images h1 {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 70px;
+}
+
+.thenew {
+  position: absolute;
+  top: 400px;
+  left: 33%;
+}
+
+.at {
+  position: absolute;
+  top: 470px;
+  left: 44%;
+}
+
+.kochi {
+  position: absolute;
+  top: 470px;
+  right: 42%;
+}
+
+.pic1 {
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  margin-top: 100px;
+  left: -50px;
+}
+
+.pic2 {
+  width: 500px;
+  height: 600px;
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.pic3 {
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  margin-top: 100px;
+  right: 0;
+}
+
+.logooncoffee {
+  transform: rotate(31deg);
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: 450px;
+  left: 44.5%;
+  opacity: 0.8;
+}
+
+/* Login Page *//* Login Page */
+.loginContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  background-color: #DCCFC1;
+}
+
+.CustomerIcon,
+.adminIcon {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.CustomerIcon:hover,
+.adminIcon:hover {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
+
+/* Optional: Add more styling for the links and their hover effects */
+.CustomerIcon,
+.adminIcon {
+  display: block;
+  margin: auto;
+}
+
+
+/* Admin Page */
+.adminContainer {
+  display: flex;
+}
+
+.sideBar {
+  background-color: rgb(240, 240, 240);
+  height: 130vh;
+  width: 15vw;
+  border-radius: 20px;
+}
+
+.sideBar li {
+  list-style: none;
+  margin-top: 10px;
+  display: block;
+}
+
+.adminReview {
+  height: auto;
+  width: 900px;
+  background-color: rgb(240, 240, 240);
+  display: block;
+  margin-left: 5%;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+.adminReview h1 {
+  padding: 20px;
+}
+
+.totavg_reviewTotal {
+  background-color: rgb(226, 231, 229);
+  height: 100px;
+  width: 200px;
+  border: 10 solid;
+  border-radius: 20px;
+  margin-left: 20px;
+  
+}
+
+.totavg_reviewAvg {
+  background-color: rgb(226, 231, 229);
+  height: 100px;
+  width: 200px;
+  position: absolute;
+  top: 300px;
+  right: 5%;
+  border: 10 solid;
+  border-radius: 20px;
+}
+
+.reviewTotal {
+  position: absolute;
+  top: 320px;
+  left: 410px;
+  padding: 5px;
+}
+
+.reviewAvg {
+ margin-left: 20px;
+  margin-top: 40px;
+  width: 200px;
+  right: 300px;
+ 
+}
+
+
+.customerRatingBox {
+  height: auto;
+  width: 1070px;
+  margin: 10px;
+  background-color: rgb(226, 231, 229);
+  border-radius: 20px;
+}
+
+.customerRatingBox th {
+  width: 450px;
+}
+
+.customerRatingBox tr {
+  height: 5px;
+}
+/* customerreview page */
+.userReview {
+  display: block;
+  margin: 40px auto;
+  width: 900px;
+  min-height: 500px;
+  background-color: #e6e3dd;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.userReview h1 {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.reviewForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 80%;
+  margin: auto;
+}
+
+.reviewForm input,
+.reviewForm textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.reviewForm textarea {
+  height: 120px;
+}
+
+.reviewForm button {
+  padding: 12px;
+  background-color: #af6c07;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.reviewForm button:hover {
+  background-color: #8f5805;
+}
+/* userlogin page */
+
+.loginContainer {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: auto;
+  margin-top: 50px;
+  background-color: rgb(201, 197, 197);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loginContainer h2 {
+  text-align: center;
+  font-family: "Caveat", cursive;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.loginContainer form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loginContainer label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.loginContainer input[type="email"],
+.loginContainer input[type="password"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.loginContainer input[type="submit"] {
+  padding: 12px;
+  background-color: #af6c07;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.loginContainer input[type="submit"]:hover {
+  background-color: #8f5805;
+}
+
+/* Links at the bottom of the form */
+.loginContainer .links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.loginContainer .links a {
+  font-size: 14px;
+  color: #af6c07;
+  text-decoration: none;
+}
+
+.loginContainer .links a:hover {
+  color: #8f5805;
+}
+
+/* signup page */
+/* Signup Page */
+.loginContainer {
+  width: 100%;
+  max-width: 00px;
+  height: auto;
+  margin: auto;
+  margin-top: 50px;
+  background-color: rgb(201, 197, 197);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loginContainer h2 {
+  text-align: center;
+  font-family: "Caveat", cursive;
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.loginContainer form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loginContainer label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.loginContainer input[type="text"],
+.loginContainer input[type="email"],
+.loginContainer input[type="password"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.loginContainer input[type="submit"] {
+  padding: 12px;
+  background-color: #af6c07;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.loginContainer input[type="submit"]:hover {
+  background-color: #8f5805;
+}
+
+.loginContainer input[type="submit"]:disabled {
+  background-color: #d5d5d5;
+  cursor: not-allowed;
+}
+
+/* Success and Error Messages */
+.loginContainer .error {
+  color: red;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.loginContainer .success {
+  color: green;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* fullimageview page */
+/* Full Image View */
+.fullImageView {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.fullImageView h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.fullImageView p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.fullImageView img {
+  width: 100%;
+  max-width: 80%;
+  margin: 1rem 0;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #af6c07;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #8f5805;
+}
+
+textarea {
+  padding: 1rem;
+  font-size: 1rem;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  resize: vertical;
+}
+
+textarea:focus {
+  border-color: #af6c07;
+}
+
+.replyForm {
+  margin-top: 1.5rem;
+}
+
+.replies {
+  margin-top: 2rem;
+}
+
+.replies h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.replies ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.replies li {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+
+/* Container for the whole admin review page */
+.adminContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/* Sidebar styling */
+.sideBar {
+  width: 250px;
+  background-color: #333;
+  padding: 20px;
+  color: white;
+}
+
+.sideBar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sideBar ul li {
+  margin: 10px 0;
+}
+
+.sideBar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sideBar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main review content styling */
+.adminReview {
+  width: calc(100% - 270px);
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.adminReview h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.totavg {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.reviewTotal,
+.reviewAvg {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.customerRatingBox {
+  margin-top: 20px;
+}
+
+.customerRatingBox table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.customerRatingBox th,
+.customerRatingBox td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.customerRatingBox th {
+  background-color: #f8f8f8;
+}
+
+.customerRatingBox tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.customerRatingBox button {
+  background-color: #575755;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.customerRatingBox button:hover {
+  background-color: #45a049;
+}
+
+.customerRatingBox img {
+  border-radius: 5px;
+}
+
+.customerRatingBox td img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.customerRatingBox td img:hover {
+  transform: scale(1.1);
+}
+
+/* AI Reply Section */
+.customerRatingBox td button {
+  margin-top: 10px;
+}
+
+.customerRatingBox td div {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.customerRatingBox td strong {
+  font-size: 14px;
+  color: #444;
+}
+
+.customerRatingBox td p {
+  font-size: 13px;
+  color: #555;
+}
+/* admin login */
+/* Container for the login page */
+.loginContainer {
+  max-width: 500px;
+ height: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th {
+  text-align: left;
+  padding: 8px;
+  font-size: 14px;
+}
+
+td {
+  padding: 8px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.formFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+/* Footer Styles */
+.footerabout{
+  font-family: "Caveat", cursive;
+  font-weight: 500;
+  font-size: 20px;
+}
+footer {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 30px 20px 10px;
+  margin-top: 40px;
+}
+
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer .section {
+  flex: 1 1 30%;
+  margin-bottom: 20px;
+}
+
+footer .link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .link-list li {
+  margin-bottom: 8px;
+}
+
+footer .link-list li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer .socials {
+  margin-top: 10px;
+}
+
+footer .socials a {
+  margin-right: 10px;
+  color: #ccc;
+  font-size: 18px;
+}
+
+footer .bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* 404 */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:#C87B29;
+
+  text-align: center;
+  
+}
+
+.error-text{
+margin-top: -350px;
+}
+
+
+.error-icon {
+  font-size: 6rem; /* text-8xl */
+}
+
+.error-code {
+  font-size: 4.5rem; /* text-6xl */
+  font-weight: 800;
+  color: #78350f; /* text-yellow-900 */
+  margin-top: 1rem;
+}
+
+.error-message {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 600;
+  color: #92400e; /* text-brown-700 (approx) */
+  margin-top: 0.5rem;
+}
+
+.error-description {
+  margin-top: 1rem;
+  color: #030a16; /* text-gray-700 */
+  max-width: 28rem;
+}
+
+.error-button {
+  margin-top: 1.5rem;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #78350f; /* bg-yellow-800 */
+  color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  text-decoration: none;
+}                 
+
+.error-button:hover {
+  background-color: #5a2d0c; /* hover:bg-yellow-900 */
+}
+
+.error-footer {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #030a16; /* text-gray-500 */
+  font-style: italic;
+}
