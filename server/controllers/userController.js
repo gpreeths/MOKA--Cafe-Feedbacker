@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'uploads/');  // Store files in the 'uploads/' folder
+    cb(null, 'uploads/reviews');  // Store files in the 'uploads/' folder
   },
   filename: function (req, file, cb) {
     cb(null, Date.now() + path.extname(file.originalname)); // Unique filename
@@ -65,7 +65,7 @@ const login = async (req, res) => {
 const createReview = async (req, res) => {
   try {
     const { reviewTitle, reviewMessage, rating } = req.body;
-    const image = req.file ? `/uploads/${req.file.filename}` : null;
+    const image = req.file ? `/uploads/reviews/${req.file.filename}` : null;
 
     const newReview = new customerReview({
       userId: req.user.id, 
