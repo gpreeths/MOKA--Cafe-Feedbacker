@@ -31,12 +31,7 @@ app.use('/user', userRoute);
 const adminRoute = require('./routes/adminRoute');
 app.use('/admin', adminRoute);
 
-// Serve React app (always serve, regardless of NODE_ENV)
-app.use(express.static(path.join(__dirname, "../client/dist")));
 
-app.get("/*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../client/dist", "index.html"));
-});
 
 app.listen(process.env.PORT || 5000, () => {
   console.log(`Running on port ${process.env.PORT || 5000}`);
