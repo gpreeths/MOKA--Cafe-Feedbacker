@@ -1,7 +1,7 @@
 const express=require('express')
 const adminRoute=express.Router()
 const adminController=require("../controllers/adminController")
-const auth=require('../middlewares/adminAuth')
+const auth=require('./middlewares/adminAuth')
 
 
 adminRoute.post('/login',adminController.login)
