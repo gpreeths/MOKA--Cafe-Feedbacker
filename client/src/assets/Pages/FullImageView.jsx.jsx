@@ -98,7 +98,7 @@ function FullImageView() {
 
           {review.image && (
             <img
-              src={`http://localhost:2000/${review.image.replace(/^\/+/, '')}`}
+              src={`${apiUrl}/${review.image.replace(/^\/+/, '')}`}
               alt="Full Size Review"
               style={{ maxWidth: '40%', maxHeight: '40%', marginBottom: '1rem' }}
             />
