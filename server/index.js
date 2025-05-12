@@ -6,8 +6,6 @@ require("dotenv").config();
 
 const app = express();
 
-const cors = require('cors');
-
 const allowedOrigins = ['https://moka-cafe-feedbacker-1.onrender.com']; // frontend URL here
 
 app.use(cors({
