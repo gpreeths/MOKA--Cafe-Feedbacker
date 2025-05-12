@@ -10,12 +10,12 @@ function AdminReview() {
   const [loading, setLoading] = useState(true);
   const [sortConfig, setSortConfig] = useState({ sortBy: 'rating', order: 'asc' });
   const [suggestedReplies, setSuggestedReplies] = useState({}); // Store suggested replies by review ID
-
+  const apiUrl = import.meta.env.VITE_API_URL;
   useEffect(() => {
     const fetchReviews = async () => {
       try {
         const token = localStorage.getItem('adminToken');
-        const response = await axios.get('http://localhost:2000/admin/view', {
+        const response = await axios.get(`${apiUrl}/admin/view`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -49,7 +49,7 @@ function AdminReview() {
       try {
         const token = localStorage.getItem('adminToken');
         const { sortBy, order } = sortConfig;
-        const response = await axios.get(`http://localhost:2000/admin/sort?sortBy=${sortBy}&order=${order}`, {
+        const response = await axios.get(`${apiUrl}/admin/sort?sortBy=${sortBy}&order=${order}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -70,7 +70,7 @@ function AdminReview() {
     try {
       const token = localStorage.getItem('adminToken');
       const response = await axios.post(
-        'http://localhost:2000/admin/suggestreply',
+        `${apiUrl}/admin/suggestreply`,
         { reviewMessage },
         {
           headers: {

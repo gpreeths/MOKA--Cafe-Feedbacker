@@ -4,12 +4,13 @@ import axios from 'axios';
 function PreviousReviews() {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const fetchReviews = async () => {
       try {
         const token = localStorage.getItem('userToken');
-        const response = await axios.get('http://localhost:2000/user/previousreviews', {
+        const response = await axios.get(`${apiUrl}/user/previousreviews`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

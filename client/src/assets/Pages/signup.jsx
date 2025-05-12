@@ -11,7 +11,7 @@ function Signup() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState('');
-
+  const apiUrl = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -21,7 +21,7 @@ function Signup() {
 
     try {
       setLoading(true);
-      const response = await axios.post('http://localhost:2000/user/signup', userData);
+      const response = await axios.post(`${apiUrl}/user/signup`, userData);
 
       if (response.status === 201) {
         setSuccessMessage('Signup successful!');

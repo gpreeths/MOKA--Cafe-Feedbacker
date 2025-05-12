@@ -12,6 +12,7 @@ function FullImageView() {
   const [loading, setLoading] = useState(false);
   const [suggestedReply, setSuggestedReply] = useState('');
   const [error, setError] = useState(null);
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     fetchReview();
@@ -20,7 +21,7 @@ function FullImageView() {
   const fetchReview = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await axios.get(`http://localhost:2000/admin/review/${id}`, {
+      const response = await axios.get(`${apiUrl}/admin/review/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -39,7 +40,7 @@ function FullImageView() {
       setLoading(true);
       const token = localStorage.getItem('adminToken');
       await axios.post(
-        `http://localhost:2000/admin/reply/${id}`,
+        `${apiUrl}/admin/reply/${id}`,
         { reviewReply: replyText },
         {
           headers: {
@@ -60,7 +61,7 @@ function FullImageView() {
     try {
       const token = localStorage.getItem('adminToken');
       const response = await axios.post(
-        `http://localhost:2000/admin/suggest-reply`,
+        `${apiUrl}/admin/suggest-reply`,
         { reviewMessage: review?.reviewMessage },
         {
           headers: {

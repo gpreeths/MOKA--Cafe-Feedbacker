@@ -12,7 +12,7 @@ function CustomerReview() {
   const [file, setFile] = useState(null); 
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
-
+  const apiUrl = import.meta.env.VITE_API_URL;
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
     if (selectedFile) {
@@ -39,7 +39,7 @@ function CustomerReview() {
       }
 
       const response = await axios.post(
-        'http://localhost:2000/user/createreview',
+        `${apiUrl}/user/createreview`,
         formData,
         {
           headers: {
