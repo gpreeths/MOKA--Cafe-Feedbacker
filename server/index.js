@@ -7,6 +7,10 @@ require("dotenv").config();
 const app = express();
 
 app.use(cors());
+app.use(cors({
+  origin: 'https://moka-cafe-feedbacker-1.onrender.com/',  // replace with your frontend URL
+  credentials: true  // if you're using JWTs
+}));
 app.use(express.json());
 
 // MongoDB connection
